@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(161, 176, 245);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    color: rgb(8, 8, 73); 
+    text-align: center;
+    font-style: unset;
+}
+h2{
+    color: rgb(60, 60, 182);
+    text-align: center;
+    font-style: italic;
+}
+p{
+    text-align: left;
+    font-size:large;
+}
+img{
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+ul li{
+    color: rgb(3, 3, 59);
+    font-size: large;
+}
+footer{
+    background-color: rgb(7, 7, 75);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}

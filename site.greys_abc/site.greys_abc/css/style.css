@@ -1,0 +1,260 @@
+/*
+#6A5ACD SlateBlue	
+#836FFF SlateBlue1	
+#191970 Azul escuro
+*/
+
+body {
+    background-color: #a1b0f5;
+    margin: 0;
+}
+
+header {
+    background-color: #080849;	;
+    margin: 0;
+    padding: 15px 15px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    color: #f2f5df;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div img{
+    width: 15%;
+}
+
+h1 {
+    color: #080849;
+    text-align: center;
+    font-style: unset;
+    margin: 20px;
+}
+
+h2 {
+    color: #3c3cb6;
+    text-align: center;
+    font-style: italic;
+    margin: 20px;
+}
+
+p {
+    text-align: left;
+    font-size: large;
+    margin: 20px;
+}
+
+
+ul li {
+    color: #03033b;
+    font-size: large;
+}
+
+footer {
+    background-color: #3a4394;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+h3 {
+    color: #f2f5df;
+    text-align: left;
+    font-style: unset;
+    background-color: #3c3cb6;
+    margin: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.banner{
+    background: url(../img/images.jpg) no-repeat center/cover;
+    height: 200px;
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: left;
+    text-shadow: 2px.2px.2px.2px;
+    margin: 0;
+    
+}
+.banner2{
+    
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#ffffff;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;    
+
+}
+
+#sobre{
+    padding: 35px;
+    background-color:  #dddadd;
+    color: #757375
+ }
+
+ .sobre-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1400px;
+    margin: auto;
+ }
+
+ .sobre-texto{
+    flex: 1;
+    padding: 20px;
+ }
+
+ .sobre-texto h1{
+    font-size: 1.5;
+    margin-bottom: 20px;
+ }
+
+ .sobre-texto p{
+    font-size: 1;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 10px;
+ }
+
+ .sobre-texto h2{
+    margin-top: 20px;
+ }
+
+ .hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    flex: 1;
+}
+
+.hex {
+    width: 200px;
+    height: 173.2px; 
+    clip-path: polygon(
+        25% 0%, 75% 0%, 100% 50%, 
+        75% 100%, 25% 100%, 0% 50%
+    );
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+        margin-top: -20px; 
+   }
+.hex img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card {
+    width: 70%;
+    
+}
+
+ #acao .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    padding: 50px 0;
+    margin: 7px;
+ }
+
+ #acao .item {
+    background-color: #3c3cb6;
+    border: #080879;
+    border-radius: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+#acao .item:hover{
+    transform: translatey(-5px);
+    box-shadow: 0 8px 16px #3c3cb6;
+}
+
+.hex:hover {
+    transform: scale(1.05);
+}
+
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    
+
+}
+@media( max-width:675px ){
+    header .container{
+        flex-direction: column;
+        text-align: center;
+    
+     }
+    .banner {
+        margin-top: 180px;
+    }
+
+nav ul {
+    margin-top: 10px;
+    flex-direction: column;
+}
+}
+
+/* Modal */
+.card{
+    background-color: #3c3cb6;
+    padding: 20px;
+    border-radius: 0 4px 10px #b4b4f0;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.card h3{
+    margin-top: 0;
+}
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #a1b0f5;
+    color: #080849;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+}

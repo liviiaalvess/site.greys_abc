@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Greys ABC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.png">
+
+
+
+
+<body class="paginamensagem">
+    <header>
+        <div class="container">
+            <div class="logo">
+              <a href="index.html"><img class="logo" src="img/logoofc.png" alt="logo de greys anatomy"> </a>     
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#sobre">Curiosidades</a></li>
+                    <li><a href="index.html#premios">Premios</a></li>
+                    <li><a href="index.html #perssonagens">Personagens</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="tabela.html">Tabela</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="inicio" class="bannercontato">
+
+    </section>
+    <main>
+        <section id="contato"> 
+            <div class="container">
+                <h1 class="centralizado">Cirurgiões mais bonitos da série</h1>
+                <br>
+                <div class="tabela-container">                
+                    <table class="tabela-ia">
+                        <thead>  
+                            <tr>
+                                <th>Ator</th> 
+                                <th>Perssonagem</th>
+                                <th>Idade</th> 
+                                <th>Apelido</th> 
+                                <th>Par romântico</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>  <!-- segunda linha -->
+                                <td>Patrick dempsey</td> <!-- segunda linha, primeira coluna -->
+                                <td>Derek Shepherd</td>
+                                <td> 49 anos </td>
+                                <td> "McDreamy"</td>
+                                <td>Meredith Grey</td>
+                            </tr>
+                            <tr> <!-- terceira linha -->
+                                <td>Eric Dane</td>
+                                <td>Mark Sloan</td>
+                                <td>42 anos</td>
+                                <td>"McSteamy" </td>
+                                <td>Lexie Grey</td>
+                            </tr>
+                            <tr>
+                                <td>Justin Chambers</td>
+                                <td>Alex Karev</td>
+                                <td>45 anos</td>
+                                <td> "Frat Boy"</td>
+                                <td> Izzy Stevens</td>
+                            </tr>
+                            <tr>
+                                <td>Jesse Williams</td>
+                                <td>Jackson Avery</td>
+                                <td>42 anos</td>
+                                <td>"O Soberano de Atlantis"</td>
+                                <td>April Kepner</td>
+                            </tr>
+                        </tbody>
+                    </table>   
+                </div>
+            </div>
+        </section>
+               <section id="jogo">
+          <h1 class="centraliza">Quiz sobre nosso conteúdo!</h1>
+          <p class="centraliza">Arraste as peças para a área correta.</p>
+    
+          <div class="jogo-container">
+            <div class="dropzone topleft" data-zone="ml">
+              <h3>Homens bonitos</h3>
+            </div>
+            <div class="dropzone topright" data-zone="cv">
+              <h3>Premiações</h3>
+            </div>
+            <div class="dropzone bottomleft" data-zone="pln">
+              <h3>Namoradas dos bonitos</h3>
+            </div>
+            <div class="dropzone bottomright" data-zone="ia-gen">
+              <h3>Quais são os apelidos dos cirurgiões?</h3>
+            </div>
+          </div>
+    
+          <div class="tray">
+            
+            <div class="item" id="p1" draggable="true" data-answers="ml">Derek Shepherd</div>
+            <div class="item" id="p2" draggable="true" data-answers="ml">Mark Sloan</div>
+            <div class="item" id="p3" draggable="true" data-answers="ml">Alex Karev</div>
+    
+            <!-- Visão Computacional -->
+            <div class="item" id="p4" draggable="true" data-answers="cv">Primetime Emmy Awards</div>
+            <div class="item" id="p5" draggable="true" data-answers="cv">People’s Choice Awards</div>
+            <div class="item" id="p6" draggable="true" data-answers="cv">GLAAD Media Awards </div>
+    
+            <!-- Processamento de Linguagem Natural -->
+            <div class="item" id="p7" draggable="true" data-answers="pln">Meredith Grey</div>
+            <div class="item" id="p8" draggable="true" data-answers="pln">Lexie Grey</div>
+            <div class="item" id="p9" draggable="true" data-answers="pln"> Izzy Stevens</div>
+    
+            <!-- IA Generativa -->
+            <div class="item" id="p10" draggable="true" data-answers="ia-gen">"McDreamy"</div>
+            <div class="item" id="p11" draggable="true" data-answers="ia-gen">"McSteamy"</div>
+            <div class="item" id="p12" draggable="true" data-answers="ia-gen">"Frat Boy"</div>
+          </div>
+        </section>
+        
+    </main>
+   
+    
+    <footer>
+      <p class="centraliza">Desenvolvidos por Lívia Alves - 2025</p>
+
+
+    </footer>    
+    <!-- Script Drag & Drop -->
+      <script>
+        const items = document.querySelectorAll('.item');
+        const zones = document.querySelectorAll('.dropzone');
+    
+        items.forEach(it => {
+          it.addEventListener('dragstart', e => {
+            e.dataTransfer.setData('text/plain', it.id);
+            setTimeout(() => it.classList.add('dragging'), 0);
+          });
+          it.addEventListener('dragend', () => it.classList.remove('dragging'));
+        });
+    
+        zones.forEach(z => {
+          z.addEventListener('dragover', e => e.preventDefault());
+          z.addEventListener('dragenter', () => z.classList.add('over'));
+          z.addEventListener('dragleave', () => z.classList.remove('over'));
+    
+          z.addEventListener('drop', e => {
+            e.preventDefault();
+            z.classList.remove('over');
+    
+            const id = e.dataTransfer.getData('text/plain');
+            const piece = document.getElementById(id);
+            const allowed = (piece.dataset.answers || '').split(',').map(s => s.trim());
+            const zoneKey = z.dataset.zone;
+    
+            if (allowed.includes(zoneKey)) {
+              z.appendChild(piece);
+              piece.classList.add('ok');
+              piece.setAttribute('draggable','false');
+              piece.style.cursor = 'default';
+            } else {
+              piece.classList.add('nope');
+              setTimeout(() => piece.classList.remove('nope'), 350);
+            }
+          });
+        });
+      </script>  
+</body>
+
+</html>
+
+
